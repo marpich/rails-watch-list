@@ -1,19 +1,18 @@
-<div class="banner">
-    <img src="https://www.lambesc.fr/fileadmin/user_upload/cinema.jpg" alt="">
-
-    <div class="container">
-      <h1>Lists of movies</h1>
-      <p>Share your best movies with us!</p>
-      <a class="btn btn-flat" href="#">Apply now</a>
-      <%= link_to "Create a movie list", new_list_path, class:"btn btn-flat" %>
-    </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    Breakfast
-    <ul>
-      <% @lists.each do |list| %>
-        <li> <%= link_to list.name, list_path(list) %> </li>
-      <% end %>
-    </ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.lambesc.fr/fileadmin/user_upload/cinema.jpg);">
+  <div class="container">
+    <h1>Lists of Movies</h1>
+    <%= link_to "Create a movie list", new_list_path, class: "btn btn-ghost" %>
   </div>
+</div>
+
+<div class="sub-title">
+  <h2>Share your best movies with us ! Just here 👇🏼 </h2>
+</div>
+
+<div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.istockphoto.com/photos/reel-of-film-picture-id534129330?k=20&m=534129330&s=612x612&w=0&h=1tSgANmWYgbOTnPmIXWVqMLzMZ428nzpjy23CJoCnAo=)">
+        <%= link_to list.name, list_path(list) %>
+      </div>
+    <% end %>
 </div>
