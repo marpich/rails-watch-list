@@ -19,10 +19,16 @@
   margin-top: 10px;
 }
 
+.cards-index {
+ display: flex;
+ justify-content: space-around;
+}
+
 .card-index {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  width: 33%;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;

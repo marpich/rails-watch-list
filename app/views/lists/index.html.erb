@@ -10,9 +10,11 @@
 </div>
 
 <div class="cards-index">
+
     <% @lists.each do |list| %>
-      <div class="card-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.istockphoto.com/photos/reel-of-film-picture-id534129330?k=20&m=534129330&s=612x612&w=0&h=1tSgANmWYgbOTnPmIXWVqMLzMZ428nzpjy23CJoCnAo=)">
+      <div class="card-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(list.photo.key) %>);">
         <%= link_to list.name, list_path(list), class: "btn btn-ghost" %>
       </div>
     <% end %>
+
 </div>

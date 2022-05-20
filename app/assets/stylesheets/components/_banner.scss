@@ -2,6 +2,7 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  display: flex;
 }
 
 .banner h1 {
@@ -54,4 +55,11 @@
 .btn-flat:hover {
   background: #1BCB7F;
   color: white;
+}
+
+.banner .btn-flat {
+  position: absolute;
+  right: -450px;
+  top: 25px;
+  width: 300px;
 }
