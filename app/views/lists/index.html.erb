@@ -12,9 +12,11 @@
 <div class="cards-index">
 
     <% @lists.each do |list| %>
-      <div class="card-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(list.photo.key) %>);">
-        <%= link_to list.name, list_path(list), class: "btn btn-ghost" %>
-      </div>
+      <% if list.photo.attached? %>
+        <div class="card-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(list.photo.key) %>);">
+          <%= link_to list.name, list_path(list), class: "btn btn-ghost" %>
+        </div>
+      <% end %>
     <% end %>
 
 </div>
